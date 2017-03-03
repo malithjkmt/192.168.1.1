@@ -1,0 +1,70 @@
+
+<html>
+<head>
+    <title></title><meta http-equiv=Content-Script-Type content=text/javascript>
+    <meta http-equiv=Content-Style-Type content=text/css>
+    <meta http-equiv=Content-Type content="text/html; charset=
+iso-8859-1">
+    <link rel="stylesheet" href="../css/style.css" type="text/css" >
+    <script language="javascript" src="/basic/tc2wanfun.js"></script>
+    <script language="javascript" src="/basic/tc2func.js"></script>
+    <style type="text/css">
+    </style>
+    <script language="JavaScript">
+        function PasswordValidate()
+        {
+            var Password;
+            Password = document.wizPPPForm_SriLanka.WizPPPSriLankaPPPPassWord.value;
+            if((Password.match("[0-9]") == null)||(Password.match("[a-zA-Z]") == null))
+            {
+                alert("Password should have a alpha and a numeric characters at least!");
+                return false;
+            }
+            return true;
+        }
+        function uiSave()
+        {
+            document.wizPPPForm_SriLanka.submit();
+        }
+        function ExitWizard()
+        {
+            if (confirm("Quit Quick Start wizard and discard settings ?"))
+            {
+                window.opener=null;
+                window.close();
+            }
+        }
+        function ToAdv()
+        {
+            window.location="../rpSys.html";
+        }
+    </script>
+</head><body>
+<FORM METHOD="POST" ACTION="/Forms/wizPPP_SriLanka_1" name="wizPPPForm_SriLanka"><table width="500" border="0" align=center cellpadding="0" cellspacing="0">
+    <tr>
+        <td width="500" height="5" valign="baseline" class="orange"></td></tr></table><table border="0" width="500" align=center cellspacing="0" cellpadding="0">
+    <tr>
+        <td width="100" height="50" align=center valign=middle bgcolor="#FFFFFF">
+            <div align=left><img src="../Images/Logo.gif" width="200" height="20"></div></td><td width="200" align=right valign="bottom" bgcolor="#FFFFFF" class="model">
+    </td></tr><tr>
+    <td width="500" colspan="2" class="orange"> </td></tr></table><table width="500" height="2" border="0" align=center cellpadding="0" cellspacing="0" class="orange">
+    <tr>
+        <td class="orange"> </td></tr></table><table width="500" height="200" border="0" align=center cellpadding="0" cellspacing="0" color="#FF9933">
+    <tr>
+        <td width="500" align=left valign="bottom" bgcolor="#FFFFFF" class="tabdata" colspan=4>
+            Quick Start</td></tr><tr>
+    <td colspan=4 class="tabdata">
+        Enter the PPPoE/PPPoA information provided to you by your ISP. Click <B>Next</B> to continue.</td></tr><tr>
+    <td class="tabdata"><div align=right id="WizPPPSriLankaUsernameId" >
+        Username</div></td><td class="tabdata"><div align=center>:</div></td><td class="tabdata">
+    <INPUT TYPE="TEXT" NAME="WizPPPSriLankaPPPUser" SIZE="32" MAXLENGTH="64" VALUE="mgm2247844@sltbb"></td><td width="220" class="tabdata">&nbsp;</td></tr><tr>
+    <td class="tabdata"><div align=right id="WizPPPSriLankaPasswordId">
+        Password</div></td><td class="tabdata"><div align=center>:</div></td><td class="tabdata">
+    <INPUT TYPE="PASSWORD" NAME="WizPPPSriLankaPPPPassWord" SIZE="32" MAXLENGTH="64" VALUE="mgm224"></td><td width="220" class="tabdata">&nbsp;</td></tr><tr>
+    <td colspan=4 class="tabdata">
+        If you need advance configuration(not recommended for normal users) Please click on <B>Advance</B> Button.</td><td><INPUT TYPE="HIDDEN" NAME="wizPPPExitFlag_Sri" VALUE="0"></td></tr></table><table width="500" height="40" border="0" align=center cellpadding="0" cellspacing="0" class="orange">
+    <tr>
+        <td class="orange">
+            <div align=right>
+                <INPUT TYPE="BUTTON" NAME="NextBtn_Sri" VALUE="Next"Â"50" class="tabdata" onClick="uiSave()"><INPUT TYPE="BUTTON" NAME="ExitBtn_Sri" VALUE="Exit"Â"50" class="tabdata" onClick="ExitWizard()"><INPUT TYPE="BUTTON" NAME="AdvBtn_Sri" VALUE="Advance"Â"50" class="tabdata" onClick="ToAdv()"></div></td><td width="25" valign="baseline" class="orange">&nbsp;</td></tr></table></form>
+</body></html>

@@ -1,0 +1,23 @@
+<html>
+<head>
+    <script type="text/javascript">
+        function disp_prompt()
+        {
+            var name=prompt("Please enter your name","")
+            var Age=prompt("Please enter your Age","")
+            if (name!=null && name!="")
+            {
+                if (Age != null && Age != "")
+                {
+                    document.write("Hello " + name + "! Your age is "+ Age);
+                }
+
+            }
+        }
+    </script>
+</head>
+<body>
+<form>
+    <input type="button" onclick="disp_prompt()" value="Display a prompt box">
+</form>
+</body>
